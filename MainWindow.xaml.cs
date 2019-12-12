@@ -23,15 +23,13 @@ namespace RuneScape_Tool
 
             DownloadHiscores downloadHiscores = new DownloadHiscores();
 
-            // This works correctly and grabs all the needed information from the URL.
-            // Find a way to make this non-hardcoded.
-            //Debug.Write(downloadHiscores.Download(RS3.RS3_Hiscore_Regular, "waber")); 
-
             // Saves the Hiscores to a JSON File after downloading the CSV format from the website / API
             //SaveHiscores2Json saveHiscores = new SaveHiscores2Json();
             //saveHiscores.SaveHiscores(downloadHiscores.Download(RS3.RS3_Hiscore_Regular, "waber"), "waber");
 
             CompareStatsToQuestRequirements compareQuestRequirements = new CompareStatsToQuestRequirements();
+
+            GenerateQuests.ExecuteQuestGeneration();
 
             compareQuestRequirements.CompareQuestRequirements(File.ReadAllText(@"Quests\Old School Runescape\Cooks_Assistant.json"));
 
@@ -39,7 +37,7 @@ namespace RuneScape_Tool
 
         private void GenerateQuestsButton_Click(object sender, RoutedEventArgs e)
         {
-            GenerateQuests.ExecuteClassGeneration();
+            GenerateQuests.ExecuteQuestGeneration();
         }
     }
 }

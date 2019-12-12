@@ -10,39 +10,17 @@ namespace RuneScape_Tool
         private static readonly JArray qRewards = new JArray();
         private static readonly JsonHandler _jsonHandler = new JsonHandler();
 
-        public static void ExecuteClassGeneration()
+        public static void ExecuteQuestGeneration()
         {
             Cooks_Assistant();
             The_Restless_Ghost();
+            Rune_Mysteries();
         }
         private static void Cooks_Assistant()
         {
 
             //Skill requirements
-            skills.Add("0"); //Overall
-            skills.Add("0"); //Attack
-            skills.Add("0"); //Defence
-            skills.Add("0"); //Strength
-            skills.Add("0"); //Hitpoints
-            skills.Add("0"); //Ranged
-            skills.Add("0"); //Prayer
-            skills.Add("0"); //Magic
-            skills.Add("0"); //Cooking
-            skills.Add("0"); //Woodcutting
-            skills.Add("0"); //Fletching
-            skills.Add("0"); //Fishing
-            skills.Add("0"); //Firemaking
-            skills.Add("0"); //Crafting
-            skills.Add("0"); //Smithing
-            skills.Add("0"); //Mining
-            skills.Add("0"); //Herblore
-            skills.Add("0"); //Agility
-            skills.Add("0"); //Thieving
-            skills.Add("0"); //Slayer
-            skills.Add("0"); //Farming
-            skills.Add("0"); //Runecrafting
-            skills.Add("0"); //Hunter
-            skills.Add("0"); //Construction
+            SkillRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
             //Item requirements
             items.Add("Empty Pot");
@@ -61,46 +39,17 @@ namespace RuneScape_Tool
             qRewards.Add("300 Cooking XP");
 
             //Write all JArray's to a JSON format file.
-            _jsonHandler.Write("skill_requirements", skills, @"Quests\Old School Runescape\Cooks_Assistant.json");
-            _jsonHandler.Write("items_required", items, @"Quests\Old School Runescape\Cooks_Assistant.json");
-            _jsonHandler.Write("quest_steps", qSteps, @"Quests\Old School Runescape\Cooks_Assistant.json");
-            _jsonHandler.Write("quest_rewards", qRewards, @"Quests\Old School Runescape\Cooks_Assistant.json");
+            AddToJsonFile("Cooks_Assistant");
 
-            //Clear all JArray's for the next quest.
-            skills.RemoveAll();
-            items.RemoveAll();
-            qSteps.RemoveAll();
-            qRewards.RemoveAll();
+            // Clear the JArray for the next quest
+            ClearJArray();
         }
 
         private static void The_Restless_Ghost()
         {
 
             //Skill requirements
-            skills.Add("0"); //Overall
-            skills.Add("0"); //Attack
-            skills.Add("0"); //Defence
-            skills.Add("0"); //Strength
-            skills.Add("0"); //Hitpoints
-            skills.Add("0"); //Ranged
-            skills.Add("0"); //Prayer
-            skills.Add("0"); //Magic
-            skills.Add("0"); //Cooking
-            skills.Add("0"); //Woodcutting
-            skills.Add("0"); //Fletching
-            skills.Add("0"); //Fishing
-            skills.Add("0"); //Firemaking
-            skills.Add("0"); //Crafting
-            skills.Add("0"); //Smithing
-            skills.Add("0"); //Mining
-            skills.Add("0"); //Herblore
-            skills.Add("0"); //Agility
-            skills.Add("0"); //Thieving
-            skills.Add("0"); //Slayer
-            skills.Add("0"); //Farming
-            skills.Add("0"); //Runecrafting
-            skills.Add("0"); //Hunter
-            skills.Add("0"); //Construction
+            SkillRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
             //Item requirements
             items.Add("None");
@@ -117,16 +66,92 @@ namespace RuneScape_Tool
             qRewards.Add("1125 Prayer XP");
 
             //Write all JArray's to a JSON format file.
-            _jsonHandler.Write("skill_requirements", skills, @"Quests\Old School Runescape\The_Restless_Ghost.json");
-            _jsonHandler.Write("items_required", items, @"Quests\Old School Runescape\The_Restless_Ghost.json");
-            _jsonHandler.Write("quest_steps", qSteps, @"Quests\Old School Runescape\The_Restless_Ghost.json");
-            _jsonHandler.Write("quest_rewards", qRewards, @"Quests\Old School Runescape\The_Restless_Ghost.json");
+            AddToJsonFile("The_Restless_Ghost");
 
+            // Clear the JArray for the next quest
+            ClearJArray();
+
+        }
+
+        private static void Rune_Mysteries()
+        {
+            //Skill requirements
+            SkillRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+            //Item requirements
+            items.Add("None");
+
+            //Quest instructions
+            qSteps.Add("Talk to Duke Horacio on the 1st floor of Lumbridge Castle, and ask him if he has any quests to give out. He will explain that although he himself has no tasks for the player, he did find a strange talisman. Curious about its origin, he will give you an air talisman and ask you to bring it to the arch mage of the Wizards' Tower.");
+            qSteps.Add("Go to the Wizards' Tower, which is south of Draynor Village. Once there, descend the ladder into the basement and converse with Wizard Sedridor. He will take your air talisman and give you a Research package. He will then instruct you to deliver it to Aubury in Varrock.");
+            qSteps.Add("Talk to Aubury twice, and he will give you some notes and instruct you to deliver them back to Wizard Sedridor.");
+            qSteps.Add("Make your way back to the Wizards' Tower, and talk to Wizard Sedridor once more. He will give you back your air talisman and will explain to you the basics of Runecraft.");
+
+            //Quest rewards
+            qRewards.Add(1);
+            qRewards.Add("Runecrafting Skill Access");
+            qRewards.Add("Air Talisman");
+
+            //Write all JArray's to a JSON format file.
+            AddToJsonFile("Rune_Mysteries");
+
+            // Clear the JArray for the next quest
+            ClearJArray();
+
+        }
+
+        #region Methods to make the quest generation not look super ugly.
+        #region Skill Requirements Method ( Looks Ugly )
+        private static void SkillRequirements(int Overall, int Attack, int Defence, int Strength, 
+            int Hitpoints, int Ranged, int Prayer, int Magic, int Cooking, int Woodcutting, int Fletching, int Fishing,
+            int Firemaking, int Crafting, int Smithing, int Mining, int Herblore, int Agility, int Thieving, int Slayer,
+            int Farming, int Runecrafting, int Hunter, int Construction)
+        {
+            //Skill requirements
+            skills.Add(Overall);
+            skills.Add(Attack);
+            skills.Add(Defence);
+            skills.Add(Strength);
+            skills.Add(Hitpoints);
+            skills.Add(Ranged);
+            skills.Add(Prayer);
+            skills.Add(Magic);
+            skills.Add(Cooking);
+            skills.Add(Woodcutting);
+            skills.Add(Fletching);
+            skills.Add(Fishing);
+            skills.Add(Firemaking);
+            skills.Add(Crafting);
+            skills.Add(Smithing);
+            skills.Add(Mining);
+            skills.Add(Herblore);
+            skills.Add(Agility);
+            skills.Add(Thieving);
+            skills.Add(Slayer); 
+            skills.Add(Farming);
+            skills.Add(Runecrafting); 
+            skills.Add(Hunter); 
+            skills.Add(Construction); 
+        }
+        #endregion
+
+        private static void AddToJsonFile(string QuestFileName)
+        {
+            //Write all JArray's to a JSON format file.
+            _jsonHandler.Write("skill_requirements", skills, @"Quests\Old School Runescape\" + QuestFileName + ".json");
+            _jsonHandler.Write("items_required", items, @"Quests\Old School Runescape\" + QuestFileName + ".json");
+            _jsonHandler.Write("quest_steps", qSteps, @"Quests\Old School Runescape\" + QuestFileName + ".json");
+            _jsonHandler.Write("quest_rewards", qRewards, @"Quests\Old School Runescape\" + QuestFileName + ".json");
+        }
+
+        private static void ClearJArray()
+        {
             //Clear all JArray's for the next quest.
             skills.RemoveAll();
             items.RemoveAll();
             qSteps.RemoveAll();
             qRewards.RemoveAll();
         }
+        #endregion
     }
 }

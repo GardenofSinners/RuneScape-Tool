@@ -85,7 +85,6 @@
     <Compile Include="Enums\Skills.cs" />
     <Compile Include="Functions\CompareStatsToQuestRequirements.cs" />
     <Compile Include="Functions\DownloadHiscores.cs" />
-    <Compile Include="Functions\QuestsJson.cs" />
     <Compile Include="Functions\SaveHiscores2Json.cs" />
     <Compile Include="Imported Classes\JsonHandler.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -116,15 +115,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Quests\Old School RuneScape\Cooks_Assistant.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Quests\Old School RuneScape\The_Restless_Ghost.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Quests\Old School RuneScape\" />
     <Folder Include="Quests\RuneScape 3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
