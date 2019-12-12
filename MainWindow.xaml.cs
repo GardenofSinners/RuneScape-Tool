@@ -27,8 +27,8 @@ namespace RuneScape_Tool
             //saveHiscores.SaveHiscores(downloadHiscores.Download(RS3.RS3_Hiscore_Regular, "waber"), "waber");
 
             CompareStatsToQuestRequirements compareQuestRequirements = new CompareStatsToQuestRequirements();
-            string Folder = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
-            compareQuestRequirements.CompareQuestRequirements(Folder + @"\Quests\Old School Runescape\Cooks_Assistant.json");
+            
+            compareQuestRequirements.CompareQuestRequirements(File.ReadAllText(@"Quests\Old School Runescape\Cooks_Assistant.json"));
         }
     }
 }
