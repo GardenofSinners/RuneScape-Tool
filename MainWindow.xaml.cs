@@ -4,6 +4,10 @@ using RuneScape_Tool.Endpoints;
 using System.Diagnostics;
 using System.Windows;
 using System.IO;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using System;
+using Newtonsoft.Json;
 
 namespace RuneScape_Tool
 {
@@ -12,6 +16,7 @@ namespace RuneScape_Tool
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -27,8 +32,14 @@ namespace RuneScape_Tool
             //saveHiscores.SaveHiscores(downloadHiscores.Download(RS3.RS3_Hiscore_Regular, "waber"), "waber");
 
             CompareStatsToQuestRequirements compareQuestRequirements = new CompareStatsToQuestRequirements();
-            
+
             compareQuestRequirements.CompareQuestRequirements(File.ReadAllText(@"Quests\Old School Runescape\Cooks_Assistant.json"));
+
+        }
+
+        private void GenerateQuestsButton_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateQuests.ExecuteClassGeneration();
         }
     }
 }

@@ -78,6 +78,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Functions\GenerateQuests.cs" />
     <Compile Include="Endpoints\OSRS.cs" />
     <Compile Include="Endpoints\RS3.cs" />
     <Compile Include="Enums\Activities-Minigames.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Functions\DownloadHiscores.cs" />
     <Compile Include="Functions\QuestsJson.cs" />
     <Compile Include="Functions\SaveHiscores2Json.cs" />
+    <Compile Include="Imported Classes\JsonHandler.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -117,6 +119,7 @@
     <None Include="Quests\Old School RuneScape\Cooks_Assistant.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Quests\Old School RuneScape\The_Restless_Ghost.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,18 +12,14 @@ namespace RuneScape_Tool.Functions
     {
         public void CompareQuestRequirements(string QuestJSONString /*, string PlayerStats*/)
         {
-            //var QuestJsonObject  = JsonConvert.DeserializeObject<QuestsJson>(QuestJSONString);
-            //var PlayerJsonObject = JsonConvert.DeserializeObject<>
-
-            //var Skill_Requirements  = QuestJsonObject.skill_requirements[0];
-            //var index = 0;
-            //foreach(string item in QuestJsonObject.items_required)
-            //{
-            //var Items_Required = QuestJsonObject.items_required[index];
-            //index++;
-            //}
-
             JObject QuestJsonObject = JObject.Parse(QuestJSONString);
+
+            var Skill_Requirements = QuestJsonObject["skill_requirements"];
+
+            foreach(var item in Skill_Requirements)
+            {
+                //Do stuff with <item>.
+            }
         }
     }
 }
