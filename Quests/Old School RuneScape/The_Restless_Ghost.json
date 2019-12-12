@@ -1,0 +1,42 @@
+{
+  "skill_requirements": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "items_required": [
+    "None"
+  ],
+  "quest_steps": [
+    "Talk to Father Aereck located in the Lumbridge chapel just east of Bob's Brilliant Axes, and he will tell you that a ghost is haunting the graveyard in Lumbridge. He needs you to help him. He wants you to talk to Father Urhney, located in a house west of Lumbridge Swamp, and get some information from him on ghosts.",
+    "Go south of the castle, and then keep going west in the swamps. You'll soon come upon a small house. Go inside, and talk to Father Urhney about Father Aereck needing help with the ghost haunting the graveyard. He will give you an amulet of ghostspeak so that you're able to talk to the ghost. It is advised to keep the amulet for future quests. Now, go back to the graveyard in Lumbridge, and go to the marble coffin that is located in a small house by the graveyard.",
+    "Wear your amulet of ghostspeak and search the coffin. Talk to the ghost who comes out. He will tell you he is missing his skull and wants you to get it for him. He will say he was near the Wizards' Tower on an island south of Draynor Village.",
+    "Head to the Wizards' Tower, and climb down the ladder in the room directly next to the entrance. Down the ladder you will find an altar. Search the altar. The ghost's skull shall be there, but when you grab it, a skeleton will appear and attack you. Fighting it is optional, so kill it or run, and make sure you have the skull in your inventory. Then, go back to the Lumbridge graveyard.",
+    "Talk to the ghost. He'll want you to put it in his coffin. Use the skull with the coffin and he will rest in peace. You will see his spirit disappear into the river. When you have done this, you will have finished the quest."
+  ],
+  "quest_rewards": [
+    1,
+    "1125 Prayer XP"
+  ]
+}

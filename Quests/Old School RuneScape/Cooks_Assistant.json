@@ -1,21 +1,44 @@
-﻿{
-  "skill_requirements": {
-    "first": "None"
-  },
-  "items_required": {
-    "item1": "Empty Pot",
-    "item2": "A Bucket",
-    "item3": "An Egg"
-  },
-  "quest_steps": {
-    "step_1": "To begin the quest, talk to the Cook on the ground floor of Lumbridge Castle inside the kitchen he will and ask you bring him a bucket of milk, an egg, and a pot of flour.",
-    "step_2": "To Get a Bucket of Milk go east and across the River Lum then walk north to the Lumbridge cow field and use the empty bucket on a dairy cow to obtain some milk.",
-    "step_3": "From the cow field, follow the path north-west towards the chicken coop and pick up an egg.",
-    "step_4": "With an empty pot, head north of lumbridge and follow the path until you reach the mill. Collect grain from the fields outside of the mill. Head to the top floor and put the wheat in the hopper then pull the lever. Back on the ground floor, use your pot to collect flour from the bin.",
-    "step_5": "After collecting all the ingredients, take them back to the cook. Speak to him one last time to give him the ingredients."
-  },
-  "quest_rewards": {
-    "quest_points": "1",
-    "stat_xp_1": "300 Cooking XP"
-  }
+{
+  "skill_requirements": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "items_required": [
+    "Empty Pot",
+    "A Bucket",
+    "An Egg"
+  ],
+  "quest_steps": [
+    "To begin the quest, talk to the Cook on the ground floor of Lumbridge Castle inside the kitchen he will and ask you bring him a bucket of milk, an egg, and a pot of flour.",
+    "To Get a Bucket of Milk go east and across the River Lum then walk north to the Lumbridge cow field and use the empty bucket on a dairy cow to obtain some milk.",
+    "From the cow field, follow the path north-west towards the chicken coop and pick up an egg.",
+    "With an empty pot, head north of lumbridge and follow the path until you reach the mill. Collect grain from the fields outside of the mill. Head to the top floor and put the wheat in the hopper then pull the lever. Back on the ground floor, use your pot to collect flour from the bin.",
+    "After collecting all the ingredients, take them back to the cook. Speak to him one last time to give him the ingredients."
+  ],
+  "quest_rewards": [
+    1,
+    "300 Cooking XP"
+  ]
 }
